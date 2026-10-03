@@ -19,3 +19,9 @@ A responsive music membership site with amber portrait gradients, Clerk sign-in,
 The design and application implementation are ready for deployment. Credentials, database/Blob provisioning, creator account, first music upload, live Stripe configuration, and hands-on end-to-end tests are still required. Missing setup displays a recoverable unavailable state; payment buttons do not charge while Stripe configuration is incomplete.
 
 This is a standalone Next.js port of the existing private preview. It has no Cloudflare bindings or Sites hosting dependency. Existing data/files do not transfer automatically; audit and migrate any published content before switching domains.
+
+## Free discovery and member access
+
+Publish one or two complete songs as `Music` with `Everyone` access. The two newest public audio tracks appear as inline homepage players with no login required. Visitors can create a free Clerk account without a card. Posts set to `Free & paid members` require sign-in; `Paid inner circle members` require an active subscription. Public preview copy (up to 400 characters) appears on locked cards, while the full body and media remain protected server-side. No email notifications are promised or sent by this implementation.
+
+Run `pnpm db:migrate` after connecting the database; this also adds the preview field to existing databases safely. Verify access with `pnpm test`. The first free songs need real uploads; no sample recordings are seeded.

@@ -111,3 +111,36 @@ footer > * { min-width: 0; }
   .button span { padding-left: 10px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+/* Free discovery and optional membership. */
+.listen { background: #f9edda; }
+.listen-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
+.song-card { padding: clamp(22px,3vw,36px); border: 1px solid var(--border); background: #fcf3e7; min-width: 0; }
+.song-heading { display: flex; align-items: center; gap: 18px; }
+.song-heading > svg { color: #793651; flex-shrink: 0; }
+.song-heading h3 { font-size: 30px; margin: 0 0 16px; }
+.song-heading .post-meta { margin: 0 0 8px; }
+.song-card audio { width: 100%; margin-top: 20px; }
+.song-card > p, .post-preview { color: var(--muted-foreground); font-size: 15px; }
+button.text-link { background: transparent; padding: 0; border: 0; border-bottom: 1px solid #35291f70; text-align: left; }
+.listening-soon { padding: 32px; border-left: 2px solid #a66b39; }
+.listening-soon svg { color: #793651; }
+.listening-soon h3 { font-size: 30px; margin: 20px 0 14px; }
+.listening-soon p { color: var(--muted-foreground); max-width: 520px; }
+.listen-invitation { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; margin-top: 30px; }
+.listen-invitation .text-link { margin: 0; }
+.post-action { display: block; margin-top: 18px; font-size: 14px; color: #793651; }
+.membership { grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); gap: clamp(30px,5vw,70px); align-items: start; }
+.membership-options { display: grid; gap: 24px; min-width: 0; }
+.free-card { background: #432337; }
+.free-card .price { font-size: 38px; }
+.free-card .button { background: transparent; color: #fbefdf; border: 1px solid #d0afb7; }
+.free-card .button:hover { background: #63324e; }
+.membership-card > .eyebrow { font-size: 12px; margin-bottom: 22px; }
+.unlock-panel h3 { font-size: 28px; margin: 16px 0; }
+.unlock-panel > svg { color: #793651; }
+.unlock-panel .button { width: 100%; }
+.offering-invitation { border-top: 1px solid var(--border); padding-top: 12px; }
+.offering-invitation .text-link { margin-top: 0; }
+.studio-hint { font-size: 14px; color: var(--muted-foreground); }
+@media (max-width: 900px) { .membership { grid-template-columns: minmax(0,1fr); } .membership-card { max-width: none; } }
+@media (max-width: 600px) { .listen-grid { grid-template-columns: minmax(0,1fr); } .listening-soon { padding: 24px 18px; } }
