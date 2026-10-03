@@ -1,0 +1,3 @@
+"use client";
+import { ClerkProvider } from '@clerk/nextjs';
+export default function AuthProvider({children,publishableKey}:{children:React.ReactNode;publishableKey?:string}){if(!publishableKey)return <>{children}</>;return <ClerkProvider publishableKey={publishableKey} signInUrl="/sign-in" signUpUrl="/sign-up" signInFallbackRedirectUrl="/" signUpFallbackRedirectUrl="/" afterSignOutUrl="/" appearance={{variables:{colorPrimary:'#4e243d',colorBackground:'#fcf3e7',colorForeground:'#35291f',colorMutedForeground:'#6c594c',fontFamily:'Arial, Helvetica, sans-serif',borderRadius:'4px'},elements:{cardBox:'clerk-card',headerTitle:'clerk-title',formButtonPrimary:'clerk-button'}}}>{children}</ClerkProvider>}
