@@ -268,3 +268,8 @@ footer { flex-direction: column; justify-content: center; align-items: center; }
   footer { align-items: center; }
 }
 }
+/* Feather the photograph into its surrounding color without blurring the face. */
+.portrait {
+  -webkit-mask-image: radial-gradient(ellipse 55% 65% at 50% 43%,#000 55%,rgba(0,0,0,.94) 64%,transparent 95%);
+  mask-image: radial-gradient(ellipse 55% 65% at 50% 43%,#000 55%,rgba(0,0,0,.94) 64%,transparent 95%);
+}
