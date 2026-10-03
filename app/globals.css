@@ -152,9 +152,9 @@ h1 { line-height: .96; }
 h2,h3 { line-height: 1.08; }
 p { text-wrap: pretty; }
 header { background: transparent; border: 0; padding-block: 26px; }
-.brand { font-size: 14px; letter-spacing: .18em; font-weight: 600; line-height: 1.5; }
-.brand span { font-size: 10px; letter-spacing: .3em; margin-top: 3px; }
-nav { font-size: 13px; font-weight: 500; gap: 24px; }
+.brand { display: inline-block; font-family: 'Cormorant Garamond',Georgia,serif; font-size: 26px; letter-spacing: .13em; font-weight: 500; line-height: 1.05; }
+.brand span { font-family: 'DM Sans',Arial,sans-serif; font-size: 9px; letter-spacing: .42em; margin-top: 10px; text-align: center; }
+nav { font-size: 11px; font-weight: 500; gap: 24px; text-transform: uppercase; letter-spacing: .1em; }
 .eyebrow { font-size: 10px; letter-spacing: .18em; font-weight: 600; }
 .hero { background: radial-gradient(ellipse at 65% 12%,#f9b12d 0%,transparent 54%),radial-gradient(ellipse at 10% 85%,#db6b24 0%,transparent 62%),linear-gradient(150deg,#f3a02e,#ee8826 62%,#e77b24); }
 .hero-copy { width: 53%; padding-top: clamp(70px,7vw,120px); }
@@ -206,9 +206,9 @@ footer span,footer small { color: #50372b; }
 @media (max-width: 600px) {
   :root { --page-gutter: 24px; }
   header { padding: 20px var(--page-gutter) 14px; }
-  .brand { font-size: 13px; }
-  .brand span { font-size: 9px; }
-  nav { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; font-size: 12px; margin-top: 12px; }
+  .brand { font-size: 24px; letter-spacing: .12em; }
+  .brand span { font-size: 8px; letter-spacing: .4em; margin-top: 8px; }
+  nav { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 10px; font-size: 10px; letter-spacing: .07em; margin-top: 16px; }
   nav a { min-height: 40px; white-space: nowrap; }
   .hero-copy { padding-inline: 24px; }
   .hero-copy .eyebrow { font-size: 10px; letter-spacing: .16em; margin-bottom: 18px; }
