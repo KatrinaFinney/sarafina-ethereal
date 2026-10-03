@@ -230,7 +230,8 @@ footer span,footer small { color: #50372b; }
   footer { flex-direction: column; align-items: flex-start; padding-block: 28px; gap: 18px; }
 }
 
-/* A centered composition, with the portrait leading into the artist's voice. */
+/* Center the composition on phones while preserving the desktop layout. */
+@media (max-width: 600px) {
 header { flex-direction: column; justify-content: center; text-align: center; gap: 18px; }
 nav { justify-content: center; }
 .hero { min-height: 0; }
@@ -256,7 +257,6 @@ nav { justify-content: center; }
 .membership li { justify-content: center; }
 .closing,footer { text-align: center; }
 footer { flex-direction: column; justify-content: center; align-items: center; }
-@media (min-width: 1800px) { .portrait { left: 0; right: 0; } .hero-copy { width: 100%; max-width: 900px; } }
 @media (max-width: 900px) { .portrait { height: clamp(370px,80vw,600px); } .hero-copy { padding-top: clamp(355px,75vw,540px); } }
 @media (max-width: 600px) {
   header { display: flex; gap: 12px; }
@@ -266,4 +266,5 @@ footer { flex-direction: column; justify-content: center; align-items: center; }
   .hero h1 { font-size: clamp(4rem,17vw,5.5rem); }
   .collection-note,.listen-invitation { align-items: center; }
   footer { align-items: center; }
+}
 }
