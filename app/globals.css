@@ -144,100 +144,88 @@ button.text-link { background: transparent; padding: 0; border: 0; border-bottom
 .studio-hint { font-size: 14px; color: var(--muted-foreground); }
 @media (max-width: 900px) { .membership { grid-template-columns: minmax(0,1fr); } .membership-card { max-width: none; } }
 @media (max-width: 600px) { .listen-grid { grid-template-columns: minmax(0,1fr); } .listening-soon { padding: 24px 18px; } }
-/* Every text group lives on a rounded glass surface. */
-:root { --radius: 1.25rem; --glass-radius: 26px; --glass-fill: rgba(255,248,235,.72); --glass-border: rgba(255,255,255,.52); --glass-shadow: 0 14px 44px rgba(75,35,30,.08); }
-body { background: radial-gradient(ellipse at 72% 0%,rgba(255,194,48,.9),transparent 52%),radial-gradient(ellipse at 0% 58%,rgba(241,111,37,.88),transparent 62%),radial-gradient(ellipse at 100% 100%,rgba(151,48,91,.62),transparent 60%),linear-gradient(145deg,#f8ab2e 0%,#f08a28 48%,#de662e 100%); background-attachment: fixed; }
-.glass-panel, header, footer, .hero-bottom, .section-head, .song-card, .listening-soon, .listen-invitation, .post, .empty, .collection-note, .collection-tabs, .membership-card, .auth-intro, .auth-card, .auth-page > .brand, .studio, .modal {
-  background: var(--glass-fill) !important;
-  border: 1px solid var(--glass-border) !important;
-  border-radius: var(--glass-radius) !important;
-  box-shadow: var(--glass-shadow);
-  -webkit-backdrop-filter: blur(18px) saturate(125%);
-  backdrop-filter: blur(18px) saturate(125%);
-  min-width: 0;
-}
-header { position: relative; z-index: 2; margin: 16px var(--page-gutter); padding: 20px clamp(20px,3vw,40px); min-height: 80px; }
-footer { margin: 0 var(--page-gutter) 24px; padding: 28px clamp(20px,3vw,40px); }
-.hero { min-height: clamp(740px,61vw,960px); border-radius: 32px; margin: 0 16px; }
-.hero-copy { width: 52%; padding-top: clamp(65px,6vw,110px); padding-bottom: 125px; padding-right: 20px; }
-.hero-glass { padding: clamp(24px,3vw,44px); --glass-fill: rgba(255,231,188,.32); }
-.hero-glass h1 { font-size: clamp(3.75rem,6.3vw,6.4rem); }
-.hero-glass .eyebrow { margin-bottom: 22px; }
-.hero-glass .intro { margin-bottom: 28px; }
-.hero-glass > .button { width: fit-content; }
-.hero-bottom { left: 24px; right: 24px; bottom: 20px; padding: 16px 24px; --glass-fill: rgba(255,231,188,.54); }
-.section { padding-block: clamp(36px,5vw,70px); }
-.listen, .library { background: transparent; }
-.section-head { padding: clamp(22px,3vw,36px); gap: 24px; }
-.section-head .eyebrow { margin-bottom: 16px; }
-.listen-invitation, .collection-note { padding: 20px 24px; }
-.listen-invitation p { margin: 0; }
-.song-card, .listening-soon, .empty { overflow: hidden; }
-.collection-tabs { padding: 8px 18px !important; gap: clamp(10px,3vw,32px) !important; display: flex !important; width: fit-content; flex-wrap: wrap; height: auto !important; }
-.collection-tabs button { border-radius: 12px !important; padding: 10px 12px !important; }
-.collection-tabs button[data-state=active] { border: 0 !important; background: rgba(78,36,61,.12) !important; }
-.post { padding: 16px; overflow: hidden; }
+/* Open editorial layout: expressive type over the portrait's warm color field. */
+:root { --radius: 1rem; --foreground: #302319; --muted-foreground: #50372b; }
+body { font-family: 'DM Sans',Arial,sans-serif; color: var(--foreground); background: radial-gradient(ellipse at 72% 0%,rgba(255,194,48,.9),transparent 52%),radial-gradient(ellipse at 0% 58%,rgba(241,111,37,.88),transparent 62%),radial-gradient(ellipse at 100% 100%,rgba(151,48,91,.62),transparent 60%),linear-gradient(145deg,#f8ab2e 0%,#f08a28 48%,#de662e 100%); background-attachment: fixed; }
+h1,h2,h3,.price,.clerk-title { font-family: 'Cormorant Garamond',Georgia,serif !important; font-weight: 500; letter-spacing: -.025em; }
+h1 { line-height: .96; }
+h2,h3 { line-height: 1.08; }
+p { text-wrap: pretty; }
+header { background: transparent; border: 0; padding-block: 26px; }
+.brand { font-size: 14px; letter-spacing: .18em; font-weight: 600; line-height: 1.5; }
+.brand span { font-size: 10px; letter-spacing: .3em; margin-top: 3px; }
+nav { font-size: 13px; font-weight: 500; gap: 24px; }
+.eyebrow { font-size: 10px; letter-spacing: .18em; font-weight: 600; }
+.hero { background: radial-gradient(ellipse at 65% 12%,#f9b12d 0%,transparent 54%),radial-gradient(ellipse at 10% 85%,#db6b24 0%,transparent 62%),linear-gradient(150deg,#f3a02e,#ee8826 62%,#e77b24); }
+.hero-copy { width: 53%; padding-top: clamp(70px,7vw,120px); }
+.hero-glass { padding: 0; }
+.hero h1 { font-size: clamp(5rem,8.5vw,8.5rem); }
+.hero .intro { max-width: 390px; font-size: 17px; line-height: 1.7; }
+.hero-copy > .hero-glass > .button { width: fit-content; }
+.hero-bottom { border: 0; font-size: 10px; letter-spacing: .14em; }
+.button { font-family: 'DM Sans',Arial,sans-serif; font-size: 14px; font-weight: 500; border-radius: 14px; }
+.text-link { font-size: 13px; line-height: 1.7; }
+.section { padding-block: clamp(55px,7vw,100px); }
+.listen,.library { background: transparent; }
+.section h2 { font-size: clamp(3rem,5.3vw,4.5rem); }
+.section-head p:last-child,.post-meta,.post-preview,.empty p,.collection-note { color: #50372b; }
+.section-head p:last-child { font-size: 15px; line-height: 1.75; }
+.song-card,.listening-soon,.empty { background: transparent; border: 0; border-top: 1px solid #50372b40; border-radius: 0; padding: 32px 0; }
+.song-card h3,.listening-soon h3,.empty h3 { font-size: 32px; }
+.listen-invitation { padding: 24px 0; border: 0; border-top: 1px solid #50372b40; }
+.collection-tabs { border-bottom: 1px solid #50372b40; gap: 24px !important; }
+.collection-tabs button { font-family: 'DM Sans',Arial,sans-serif; color: #50372b !important; }
+.post { padding: 0; }
 .post-art { border-radius: 18px; }
-.post h3, .post-preview, .post-meta, .post-action { margin-left: 4px; margin-right: 4px; }
-.membership { border-radius: 32px; margin: 0 16px; background: radial-gradient(ellipse at top right,#79445c,#432337 70%); }
-.membership-copy, .membership-card { --glass-fill: rgba(255,235,247,.07); --glass-border: rgba(255,238,247,.2); --glass-shadow: 0 16px 44px rgba(20,8,18,.12); padding: clamp(24px,3vw,42px); }
-.membership-copy > p:last-child { max-width: none; }
-.membership-copy h2 { font-size: clamp(2.25rem,3.8vw,3.4rem); }
-.paid-card { --glass-fill: rgba(255,235,247,.12); }
-.closing { padding: 36px var(--page-gutter); }
-.closing-glass { padding: 36px 24px; }
-.closing-glass > p:nth-child(2) { font: italic clamp(1.8rem,4vw,2.625rem) Georgia,serif; margin: 20px 0 25px; }
-.button, .studio input, .studio textarea, .studio [data-slot="select-trigger"] { border-radius: 16px; }
-.text-link { border-radius: 0; }
-.modal { --glass-fill: rgba(255,248,235,.94); }
-.auth-page > .brand { display: inline-block; padding: 18px 24px; }
-.auth-intro { padding: clamp(24px,4vw,42px); }
-.auth-card { padding: clamp(16px,3vw,28px); }
-.clerk-card, .auth-card .cl-card { background: rgba(255,248,235,.7) !important; border-radius: 20px !important; box-shadow: none !important; }
-.studio { margin: 32px auto; width: min(900px,calc(100% - 32px)); }
-.studio .status, .studio-list { border-radius: 16px; padding: 18px; background: rgba(255,255,255,.38); border: 1px solid rgba(255,255,255,.55); }
-.studio-list { margin-top: 12px; }
-@media (max-width: 1100px) {
-  .section-head { flex-direction: column; align-items: flex-start; }
-  .membership { grid-template-columns: minmax(0,1fr); }
-}
+.post h3 { font-size: 32px; }
+.collection-note { border-top: 1px solid #50372b40; }
+.membership { background: linear-gradient(135deg,#522439,#382032); gap: clamp(32px,6vw,90px); }
+.membership-copy { padding: 0; }
+.membership-copy h2 { font-size: clamp(3rem,5vw,4.7rem); }
+.membership-copy > p:last-child { line-height: 1.8; max-width: 480px; font-size: 16px; }
+.membership-card { border: 0; border-top: 1px solid #dfc9cd45; border-radius: 0; padding: 32px 0; background: transparent; }
+.membership-card h3 { font-size: 34px; }
+.membership-card .price { font-size: 58px; }
+.membership li { line-height: 1.6; }
+.membership-options { gap: 24px; }
+.free-card { background: transparent; }
+.closing-glass { padding: 0; }
+.closing-glass > p:nth-child(2) { font: italic 500 clamp(2.2rem,5vw,3.6rem)/1.1 'Cormorant Garamond',Georgia,serif; margin: 20px 0 25px; }
+footer { background: transparent; border-top: 1px solid #50372b40; }
+footer span,footer small { color: #50372b; }
+.auth-intro,.auth-card,.auth-page > .brand,.studio { background: transparent; border: 0; box-shadow: none; }
+.modal { border-radius: 22px !important; }
+.modal h2 { font-family: 'Cormorant Garamond',Georgia,serif; font-size: 36px; }
+@media (max-width: 1100px) { .membership { grid-template-columns: minmax(0,1fr); } }
 @media (max-width: 900px) {
-  .hero { min-height: 0; }
-  .portrait { height: clamp(360px,82vw,620px); }
-  .hero-copy { width: 100%; padding: clamp(300px,66vw,490px) 24px 20px; }
-  .hero-glass h1 { font-size: clamp(3rem,9vw,5rem); }
-  .hero-bottom { position: relative; left: auto; right: auto; bottom: auto; margin: 0 24px 24px; }
-  .hero-copy h1 br { display: none; }
-  .hero-copy h1 i { display: block; }
+  .hero-copy { width: 100%; padding: clamp(355px,75vw,560px) var(--page-gutter) 36px; }
+  .portrait { height: clamp(370px,80vw,620px); }
+  .hero h1 { font-size: clamp(4.1rem,12vw,6.5rem); }
+  .hero-bottom { position: relative; }
 }
 @media (max-width: 600px) {
-  :root { --page-gutter: 16px; --glass-radius: 22px; }
-  header { margin: 12px 12px; padding: 20px; }
-  nav { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 4px 12px; }
-  nav a { overflow-wrap: anywhere; }
-  .hero, .membership { margin-inline: 8px; border-radius: 26px; }
-  .hero-copy { padding-inline: 16px; }
-  .hero-glass { padding: 24px 20px; }
-  .hero-glass h1 { font-size: clamp(2.7rem,11.5vw,4rem); }
-  .hero-glass .eyebrow { letter-spacing: 1.6px; font-size: 11px; }
-  .hero-glass > .button { width: 100%; }
-  .hero-bottom { margin-inline: 16px; padding: 16px 20px; gap: 10px; }
-  .section-head { padding: 24px 20px; margin-bottom: 24px; }
-  .section-head p:last-child { margin: 0; }
-  .listen-grid, .post-grid, .membership, .membership-options, .auth-layout { grid-template-columns: minmax(0,1fr); }
-  .listen-invitation, .collection-note { display: flex; flex-direction: column; align-items: flex-start; padding: 20px; gap: 12px; }
+  :root { --page-gutter: 24px; }
+  header { padding: 20px var(--page-gutter) 14px; }
+  .brand { font-size: 13px; }
+  .brand span { font-size: 9px; }
+  nav { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; font-size: 12px; margin-top: 12px; }
+  nav a { min-height: 40px; white-space: nowrap; }
+  .hero-copy { padding-inline: 24px; }
+  .hero-copy .eyebrow { font-size: 10px; letter-spacing: .16em; margin-bottom: 18px; }
+  .hero h1 { font-size: clamp(4rem,17vw,5.5rem); margin-bottom: 22px; }
+  .hero .intro { font-size: 15px; max-width: 320px; }
+  .hero-copy > .hero-glass > .button { width: fit-content; min-width: 180px; }
+  .hero-bottom { padding: 20px 24px 28px; gap: 8px; }
+  .section-head { display: block; margin-bottom: 24px; }
+  .section-head p:last-child { margin-top: 20px; font-size: 14px; }
+  .section h2,.membership-copy h2 { font-size: 44px; }
+  .listen-grid,.post-grid,.membership,.membership-options,.auth-layout { grid-template-columns: minmax(0,1fr); }
+  .collection-tabs { gap: 18px !important; flex-wrap: wrap; }
+  .collection-tabs button { font-size: 12px !important; }
+  .listen-invitation,.collection-note { flex-direction: column; align-items: flex-start; gap: 10px; }
   .collection-note span { margin-left: 0; }
-  .collection-tabs { width: 100%; gap: 4px !important; padding: 6px !important; }
-  .collection-tabs button { flex: 1 1 auto; font-size: 13px !important; padding-inline: 8px !important; }
-  .membership { gap: 24px; padding-inline: 16px; }
-  .membership-copy, .membership-card { padding: 26px 20px; }
-  .membership-card h3 { font-size: 28px; }
-  .membership li { align-items: flex-start; }
-  .membership li svg { margin-top: 4px; }
-  .closing { padding-inline: 16px; }
-  footer { margin-inline: 12px; padding: 24px 20px; flex-direction: column; }
-  .auth-layout { margin-block: 32px; gap: 24px; }
-  .auth-intro { text-align: left; }
-  .auth-intro p { font-size: 16px; }
-  .studio { width: calc(100% - 24px); margin-block: 12px; padding: 28px 20px; }
+  .membership-card h3 { font-size: 32px; }
+  .membership li { font-size: 14px; align-items: flex-start; }
+  .membership li svg { margin-top: 3px; }
+  footer { flex-direction: column; align-items: flex-start; padding-block: 28px; gap: 18px; }
 }

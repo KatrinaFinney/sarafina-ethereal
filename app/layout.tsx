@@ -1,6 +1,11 @@
 import type { Metadata, Viewport } from 'next';
 import {authSettings} from '@/lib/auth';
 import AuthProvider from './auth-provider';
+import '@fontsource/dm-sans/400.css';
+import '@fontsource/dm-sans/500.css';
+import '@fontsource/dm-sans/600.css';
+import '@fontsource/cormorant-garamond/500.css';
+import '@fontsource/cormorant-garamond/500-italic.css';
 import './globals.css';
 export const dynamic='force-dynamic';
 export const viewport:Viewport={width:'device-width',initialScale:1};
