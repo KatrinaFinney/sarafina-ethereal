@@ -229,3 +229,41 @@ footer span,footer small { color: #50372b; }
   .membership li svg { margin-top: 3px; }
   footer { flex-direction: column; align-items: flex-start; padding-block: 28px; gap: 18px; }
 }
+
+/* A centered composition, with the portrait leading into the artist's voice. */
+header { flex-direction: column; justify-content: center; text-align: center; gap: 18px; }
+nav { justify-content: center; }
+.hero { min-height: 0; }
+.portrait { inset: 0 0 auto; height: clamp(420px,45vw,600px); background-size: auto 100%; background-position: center top; mask-image: linear-gradient(180deg,#000 0%,#000 74%,transparent 100%); }
+.hero-copy { width: 100%; max-width: 900px; margin-inline: auto; padding: clamp(380px,40vw,540px) var(--page-gutter) 40px; text-align: center; }
+.hero h1 { font-size: clamp(4rem,7.5vw,7rem); }
+.hero .intro { margin-inline: auto; max-width: 480px; }
+.hero-copy > .hero-glass > .button { margin-inline: auto; }
+.hero-bottom { position: relative; justify-content: center; text-align: center; padding-block: 22px 30px; }
+.section-head { flex-direction: column; align-items: center; text-align: center; gap: 24px; }
+.section-head p:last-child { margin: 0; }
+.song-card,.listening-soon,.post,.membership-copy,.membership-card { text-align: center; }
+.song-heading { justify-content: center; }
+.listening-soon p,.membership-copy > p:last-child { margin-inline: auto; }
+.listening-soon svg { margin-inline: auto; }
+.collection-tabs { margin-inline: auto; justify-content: center; }
+.collection-note,.listen-invitation { justify-content: center; text-align: center; }
+.collection-note span { margin-left: 0; }
+.membership { grid-template-columns: minmax(0,1fr); justify-items: center; gap: 40px; }
+.membership-copy { width: min(100%,680px); }
+.membership-options { width: min(100%,620px); }
+.membership-card > svg { margin-inline: auto; }
+.membership li { justify-content: center; }
+.closing,footer { text-align: center; }
+footer { flex-direction: column; justify-content: center; align-items: center; }
+@media (min-width: 1800px) { .portrait { left: 0; right: 0; } .hero-copy { width: 100%; max-width: 900px; } }
+@media (max-width: 900px) { .portrait { height: clamp(370px,80vw,600px); } .hero-copy { padding-top: clamp(355px,75vw,540px); } }
+@media (max-width: 600px) {
+  header { display: flex; gap: 12px; }
+  nav { justify-content: center; margin-top: 0; gap: 4px 14px; }
+  .section-head { display: flex; }
+  .section-head p:last-child { margin-top: 0; }
+  .hero h1 { font-size: clamp(4rem,17vw,5.5rem); }
+  .collection-note,.listen-invitation { align-items: center; }
+  footer { align-items: center; }
+}
