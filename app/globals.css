@@ -146,7 +146,7 @@ button.text-link { background: transparent; padding: 0; border: 0; border-bottom
 @media (max-width: 600px) { .listen-grid { grid-template-columns: minmax(0,1fr); } .listening-soon { padding: 24px 18px; } }
 /* Every text group lives on a rounded glass surface. */
 :root { --radius: 1.25rem; --glass-radius: 26px; --glass-fill: rgba(255,248,235,.72); --glass-border: rgba(255,255,255,.52); --glass-shadow: 0 14px 44px rgba(75,35,30,.08); }
-body { background: radial-gradient(ellipse at 0% 25%,#f6dfbc,transparent 60%),linear-gradient(145deg,#fcf3e7,#f5dec2); }
+body { background: radial-gradient(ellipse at 72% 0%,rgba(255,194,48,.9),transparent 52%),radial-gradient(ellipse at 0% 58%,rgba(241,111,37,.88),transparent 62%),radial-gradient(ellipse at 100% 100%,rgba(151,48,91,.62),transparent 60%),linear-gradient(145deg,#f8ab2e 0%,#f08a28 48%,#de662e 100%); background-attachment: fixed; }
 .glass-panel, header, footer, .hero-bottom, .section-head, .song-card, .listening-soon, .listen-invitation, .post, .empty, .collection-note, .collection-tabs, .membership-card, .auth-intro, .auth-card, .auth-page > .brand, .studio, .modal {
   background: var(--glass-fill) !important;
   border: 1px solid var(--glass-border) !important;
@@ -160,7 +160,7 @@ header { position: relative; z-index: 2; margin: 16px var(--page-gutter); paddin
 footer { margin: 0 var(--page-gutter) 24px; padding: 28px clamp(20px,3vw,40px); }
 .hero { min-height: clamp(740px,61vw,960px); border-radius: 32px; margin: 0 16px; }
 .hero-copy { width: 52%; padding-top: clamp(65px,6vw,110px); padding-bottom: 125px; padding-right: 20px; }
-.hero-glass { padding: clamp(24px,3vw,44px); --glass-fill: rgba(255,231,188,.54); }
+.hero-glass { padding: clamp(24px,3vw,44px); --glass-fill: rgba(255,231,188,.32); }
 .hero-glass h1 { font-size: clamp(3.75rem,6.3vw,6.4rem); }
 .hero-glass .eyebrow { margin-bottom: 22px; }
 .hero-glass .intro { margin-bottom: 28px; }
