@@ -285,3 +285,62 @@ footer { flex-direction: column; justify-content: center; align-items: center; }
 .brand { font-size: 32px; letter-spacing: -.02em; line-height: 1.15; white-space: nowrap; }
 .brand .brand-prefix { display: inline; font-family: inherit; font-size: .72em; font-weight: inherit; letter-spacing: 0; margin: 0; text-align: inherit; }
 @media (max-width: 600px) { .brand { font-size: 30px; letter-spacing: -.02em; } }
+
+/* Final polish: clear invitations, a quieter free tier, and a seamless color flow. */
+header .brand-message { font-size: 30px; letter-spacing: -.025em; }
+nav { font-size: 12px; letter-spacing: .09em; }
+.eyebrow, .hero-copy .eyebrow, .hero-bottom { font-size: 11px; }
+.text-link { font-size: 14px; border-bottom-color: #30231980; text-underline-offset: 5px; }
+.hero .text-link { font-size: 15px; font-weight: 500; max-width: 100%; }
+.button, .text-link, nav a, .post-art { transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease; }
+.button { border-radius: 16px; }
+.text-link:hover { color: #4e243d; border-bottom-color: #4e243d; }
+nav a:hover { text-decoration-thickness: 1px; }
+a:focus-visible, button:focus-visible { outline-color: #4e243d; border-radius: 4px; }
+.button:focus-visible { border-radius: 16px; }
+.membership a:focus-visible, .membership button:focus-visible { outline-color: #ffc26e; }
+.library { padding-bottom: clamp(100px, 10vw, 145px); }
+.section.is-empty { padding-top: clamp(40px, 5vw, 64px); }
+.listen.is-empty { padding-bottom: 24px; }
+.is-empty .section-head { margin-bottom: 22px; }
+.is-empty .listening-soon, .is-empty .empty { padding-block: 24px; }
+.is-empty .listening-soon h3, .is-empty .empty h3 { font-size: 28px; margin-block: 14px 10px; }
+.is-empty .listening-soon p { margin-block: 10px; }
+.is-empty .listening-soon .text-link { margin-top: 12px; }
+.is-empty .collection-tabs { display: none; }
+.is-empty .collection-note { margin-top: 24px; }
+.membership { position: relative; isolation: isolate; background: linear-gradient(180deg,#522439,#382032); }
+.membership::before { content: ''; position: absolute; inset: -72px 0 auto; height: 73px; background: linear-gradient(180deg,rgba(82,36,57,0),#522439); pointer-events: none; z-index: -1; }
+.membership-options { gap: 16px; }
+.free-card { display: grid; grid-template-columns: 1fr auto; align-items: baseline; column-gap: 20px; padding-block: 20px 24px; }
+.free-card h3 { font-size: 30px; margin: 0; }
+.free-card .price { font-size: 36px; margin: 0; }
+.free-card ul, .free-card .button, .free-card .fine { grid-column: 1 / -1; }
+.free-card ul { padding: 12px 0 4px; margin: 16px 0 12px; }
+.free-card li { margin: 8px 0; }
+.free-card .fine { margin-top: 12px; }
+.paid-card { padding-block: 28px 0; }
+.paid-card > .eyebrow { font-size: 11px; margin-bottom: 16px; color: #f2b65e; }
+.paid-card h3 { margin-block: 18px; }
+.paid-card .price { margin-block: 20px; }
+.membership-card .price span { font-family: 'DM Sans',Arial,sans-serif; font-size: 14px; letter-spacing: 0; margin-left: 5px; }
+@media (max-width: 600px) {
+  header .brand-message { font-size: 28px; }
+  nav { font-size: 11px; gap: 4px 16px; letter-spacing: .055em; }
+  nav a { min-height: 44px; }
+  .hero-copy .eyebrow { font-size: 11px; }
+  .hero .intro { font-size: 16px; }
+  .hero .text-link { font-size: 14px; }
+  .section-head p:last-child { font-size: 15px; }
+  .collection-tabs button { font-size: 14px !important; }
+  .membership { gap: 28px; }
+  .free-card { grid-template-columns: 1fr; justify-items: center; gap: 10px; }
+  .free-card h3 { font-size: 28px; }
+  .free-card ul, .free-card .button, .free-card .fine { grid-column: 1; }
+  .free-card .button { width: 100%; }
+  .free-card ul { width: 100%; margin-top: 4px; padding-top: 10px; }
+  .free-card .fine { margin-top: 0; }
+  .paid-card h3 { font-size: 30px; }
+  .fine { font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) { .button, .text-link, nav a, .post-art { transition: none; } }
