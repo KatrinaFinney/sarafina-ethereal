@@ -458,14 +458,14 @@ header .brand-message,.hero h1,.listen h2,.listen h3,.library h2,.library h3,.cl
   background: url('/sarafina.jpg') center top / cover no-repeat;
   transform: translateX(-50%);
   pointer-events: none;
-  -webkit-mask-image: linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent),linear-gradient(180deg,rgba(0,0,0,.65),#000 5%,#000 var(--photo-bottom),transparent);
-  mask-image: linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent),linear-gradient(180deg,rgba(0,0,0,.65),#000 5%,#000 var(--photo-bottom),transparent);
+  -webkit-mask-image: linear-gradient(90deg,transparent 14%,#000 32%,#000 68%,transparent 86%),linear-gradient(180deg,transparent,#000 5%,#000 var(--photo-bottom),transparent);
+  mask-image: linear-gradient(90deg,transparent 14%,#000 32%,#000 68%,transparent 86%),linear-gradient(180deg,transparent,#000 5%,#000 var(--photo-bottom),transparent);
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
 }
 .portrait::before { filter: blur(12px); }
 .portrait::after {
-  -webkit-mask-image: radial-gradient(ellipse 50% 72% at 50% 40%,#000 60%,rgba(0,0,0,.85) 76%,transparent 100%),linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent),linear-gradient(180deg,rgba(0,0,0,.65),#000 5%,#000 var(--photo-bottom),transparent);
-  mask-image: radial-gradient(ellipse 50% 72% at 50% 40%,#000 60%,rgba(0,0,0,.85) 76%,transparent 100%),linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent),linear-gradient(180deg,rgba(0,0,0,.65),#000 5%,#000 var(--photo-bottom),transparent);
+  -webkit-mask-image: radial-gradient(ellipse 50% 72% at 50% 40%,#000 60%,rgba(0,0,0,.85) 76%,transparent 100%),linear-gradient(90deg,transparent 14%,#000 32%,#000 68%,transparent 86%),linear-gradient(180deg,transparent,#000 5%,#000 var(--photo-bottom),transparent);
+  mask-image: radial-gradient(ellipse 50% 72% at 50% 40%,#000 60%,rgba(0,0,0,.85) 76%,transparent 100%),linear-gradient(90deg,transparent 14%,#000 32%,#000 68%,transparent 86%),linear-gradient(180deg,transparent,#000 5%,#000 var(--photo-bottom),transparent);
 }
 @media (max-width: 900px) { .portrait { --photo-bottom: 80%; } }
