@@ -386,15 +386,15 @@ header .brand-message { text-transform: lowercase; letter-spacing: -.025em; }
 .hero-copy { isolation: isolate; }
 .hero-copy::before { display: none; }
 .portrait {
-  -webkit-mask-image: linear-gradient(90deg,transparent 0%,#000 32%,#000 72%,transparent 100%),linear-gradient(180deg,#000 0%,#000 85%,transparent 100%);
-  mask-image: linear-gradient(90deg,transparent 0%,#000 32%,#000 72%,transparent 100%),linear-gradient(180deg,#000 0%,#000 85%,transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 50% 72% at 50% 40%,#000 60%,rgba(0,0,0,.85) 76%,transparent 100%),linear-gradient(180deg,#000 0%,#000 85%,transparent 100%);
+  mask-image: radial-gradient(ellipse 50% 72% at 50% 40%,#000 60%,rgba(0,0,0,.85) 76%,transparent 100%),linear-gradient(180deg,#000 0%,#000 85%,transparent 100%);
   -webkit-mask-composite: source-in; mask-composite: intersect;
 }
 .portrait::before {
-  background: inherit; filter: blur(6px); transform: scale(1.015);
+  background: inherit; filter: blur(10px); transform: scale(1.015);
   -webkit-backdrop-filter: none; backdrop-filter: none;
-  -webkit-mask-image: radial-gradient(ellipse 43% 80% at 50% 40%,transparent 78%,#000 100%);
-  mask-image: radial-gradient(ellipse 43% 80% at 50% 40%,transparent 78%,#000 100%);
+  -webkit-mask-image: radial-gradient(ellipse 40% 68% at 50% 40%,transparent 62%,#000 94%);
+  mask-image: radial-gradient(ellipse 40% 68% at 50% 40%,transparent 62%,#000 94%);
 }
 .membership { color: #fff5e8; }
 .membership-copy > p:last-child,.membership .fine,.membership .price span { color: #f1dfe2; }
@@ -403,7 +403,7 @@ header .brand-message { text-transform: lowercase; letter-spacing: -.025em; }
 @media (max-width: 900px) {
   .hero-copy::before { display: none; }
   .portrait {
-    -webkit-mask-image: linear-gradient(90deg,transparent 0%,#000 10%,#000 90%,transparent 100%),linear-gradient(180deg,#000 0%,#000 80%,transparent 100%);
-    mask-image: linear-gradient(90deg,transparent 0%,#000 10%,#000 90%,transparent 100%),linear-gradient(180deg,#000 0%,#000 80%,transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 52% 78% at 50% 38%,#000 60%,rgba(0,0,0,.85) 76%,transparent 100%),linear-gradient(180deg,#000 0%,#000 80%,transparent 100%);
+    mask-image: radial-gradient(ellipse 52% 78% at 50% 38%,#000 60%,rgba(0,0,0,.85) 76%,transparent 100%),linear-gradient(180deg,#000 0%,#000 80%,transparent 100%);
   }
 }
