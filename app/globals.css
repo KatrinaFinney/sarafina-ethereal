@@ -435,3 +435,37 @@ header .brand-message,.hero h1,.listen h2,.listen h3,.library h2,.library h3,.cl
 
 .free-tier-note { max-width: 390px; margin: 12px 0 0; font-size: 1rem; line-height: 1.6; color: var(--foreground); }
 @media (max-width: 600px) { .free-tier-note { margin-inline: auto; } }
+
+/* Feather the actual square photo edges, including on wider phone screens. */
+.portrait {
+  background: none;
+  -webkit-mask-image: none;
+  mask-image: none;
+  --photo-bottom: 85%;
+}
+.portrait::before,
+.portrait::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  height: 100%;
+  width: auto;
+  aspect-ratio: 1;
+  background: url('/sarafina.jpg') center top / cover no-repeat;
+  transform: translateX(-50%);
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent),linear-gradient(180deg,rgba(0,0,0,.65),#000 5%,#000 var(--photo-bottom),transparent);
+  mask-image: linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent),linear-gradient(180deg,rgba(0,0,0,.65),#000 5%,#000 var(--photo-bottom),transparent);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+.portrait::before { filter: blur(12px); }
+.portrait::after {
+  -webkit-mask-image: radial-gradient(ellipse 50% 72% at 50% 40%,#000 60%,rgba(0,0,0,.85) 76%,transparent 100%),linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent),linear-gradient(180deg,rgba(0,0,0,.65),#000 5%,#000 var(--photo-bottom),transparent);
+  mask-image: radial-gradient(ellipse 50% 72% at 50% 40%,#000 60%,rgba(0,0,0,.85) 76%,transparent 100%),linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent),linear-gradient(180deg,rgba(0,0,0,.65),#000 5%,#000 var(--photo-bottom),transparent);
+}
+@media (max-width: 900px) { .portrait { --photo-bottom: 80%; } }
