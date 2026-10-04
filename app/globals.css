@@ -423,3 +423,7 @@ header .brand-message,.hero h1,.listen h2,.listen h3,.library h2,.library h3,.cl
 .access-invitation { max-width: 390px; font-size: 1.0625rem; line-height: 1.65; margin: 24px 0 0; color: var(--foreground); }
 .hero .access-invitation + .text-link { margin-top: 12px; }
 @media (max-width: 600px) { .access-invitation { max-width: 480px; margin-inline: auto; } }
+
+.studio-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+.studio-sign-out { flex-shrink: 0; min-height: 44px; padding: 10px 20px; border: 1px solid currentColor; border-radius: 999px; background: transparent; color: var(--foreground); font-size: 16px; }
+.studio-sign-out:hover { background: #42103912; }
