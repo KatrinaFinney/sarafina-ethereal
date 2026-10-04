@@ -427,3 +427,8 @@ header .brand-message,.hero h1,.listen h2,.listen h3,.library h2,.library h3,.cl
 .studio-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
 .studio-sign-out { flex-shrink: 0; min-height: 44px; padding: 10px 20px; border: 1px solid currentColor; border-radius: 999px; background: transparent; color: var(--foreground); font-size: 16px; }
 .studio-sign-out:hover { background: #42103912; }
+
+.access-invitation > p { margin: 0 0 12px; font-weight: 600; }
+.access-invitation ul { margin: 0; padding-left: 22px; text-align: left; }
+.access-invitation li { padding-left: 4px; margin: 8px 0; }
+.access-invitation li::marker { color: #6b2851; }
