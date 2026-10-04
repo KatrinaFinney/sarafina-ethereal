@@ -419,3 +419,7 @@ header .brand-message,.hero h1,.listen h2,.listen h3,.library h2,.library h3,.cl
 .membership .text-link { color: #fff5e8; }
 .membership .button { color: #421039; }
 .membership .free-card .button { color: #fff5e8; }
+
+.access-invitation { max-width: 390px; font-size: 1.0625rem; line-height: 1.65; margin: 24px 0 0; color: var(--foreground); }
+.hero .access-invitation + .text-link { margin-top: 12px; }
+@media (max-width: 600px) { .access-invitation { max-width: 480px; margin-inline: auto; } }
