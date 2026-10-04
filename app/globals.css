@@ -376,11 +376,11 @@ nav a { text-transform: none; font-weight: 500; }
 }
 
 /* Warm, legible ink; a feathered photograph with an untouched center. */
-:root { --foreground: #281c19; --muted-foreground: #38231f; }
+:root { --foreground: #281c19; --muted-foreground: #281c19; }
 header .brand-message { text-transform: lowercase; letter-spacing: -.025em; }
 .section-head p:last-child,.post-meta,.post-preview,.empty p,.collection-note,
 .song-card > p,.listening-soon p,footer span,footer small { color: var(--muted-foreground); }
-.collection-tabs button { color: #38231f !important; }
+.collection-tabs button { color: #281c19 !important; }
 .collection-tabs button[data-state=active] { color: #35182c !important; border-bottom-color: #35182c !important; }
 .text-link,.post-action { color: #35182c; font-weight: 600; }
 .hero-copy { isolation: isolate; }
