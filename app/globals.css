@@ -409,3 +409,13 @@ header .brand-message { text-transform: lowercase; letter-spacing: -.025em; }
 }
 
 .creator-login { font-family: 'DM Sans',Arial,sans-serif; font-size: .875rem; color: var(--foreground); text-decoration: underline; text-underline-offset: 4px; min-height: 44px; display: inline-flex; align-items: center; }
+
+/* Plum ink ties the typography to the flowers and membership palette. */
+:root { --foreground: #421039; --muted-foreground: #421039; }
+header .brand-message,.hero h1,.listen h2,.listen h3,.library h2,.library h3,.closing { color: #592149; }
+.collection-tabs button { color: #421039 !important; }
+.collection-tabs button[data-state=active] { color: #592149 !important; border-bottom-color: #592149 !important; }
+.text-link,.post-action,.creator-login { color: #421039; }
+.membership .text-link { color: #fff5e8; }
+.membership .button { color: #421039; }
+.membership .free-card .button { color: #fff5e8; }
