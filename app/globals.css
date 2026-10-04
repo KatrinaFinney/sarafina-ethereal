@@ -407,3 +407,5 @@ header .brand-message { text-transform: lowercase; letter-spacing: -.025em; }
     mask-image: radial-gradient(ellipse 52% 78% at 50% 38%,#000 60%,rgba(0,0,0,.85) 76%,transparent 100%),linear-gradient(180deg,#000 0%,#000 80%,transparent 100%);
   }
 }
+
+.creator-login { font-family: 'DM Sans',Arial,sans-serif; font-size: .875rem; color: var(--foreground); text-decoration: underline; text-underline-offset: 4px; min-height: 44px; display: inline-flex; align-items: center; }
