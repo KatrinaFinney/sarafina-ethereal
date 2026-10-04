@@ -1,6 +1,6 @@
 # Sarafina Ethereal
 
-A responsive music membership site with amber portrait gradients, Clerk sign-in, a music archive, weekly posts, a creator studio, and Stripe subscriptions at USD $2.99 per month.
+A responsive music membership site with amber portrait gradients, Clerk sign-in, a music archive, monthly posts, a creator studio, and Stripe subscriptions at USD $2.99 per month.
 
 ## Deploy on Vercel
 

@@ -9,5 +9,5 @@ import '@fontsource/cormorant-garamond/500-italic.css';
 import './globals.css';
 export const dynamic='force-dynamic';
 export const viewport:Viewport={width:'device-width',initialScale:1};
-export const metadata:Metadata={title:'Sarafina Ethereal — Your All Access Pass',description:'Soulful, raw original music from Sarafina Ethereal. Listen free, or get your all access pass to the full music archive, intimate stories, and new releases every week. $2.99/month.',icons:{icon:{url:'/favicon.svg',type:'image/svg+xml'},apple:'/sarafina.jpg'}};
+export const metadata:Metadata={title:'Sarafina Ethereal — Your All Access Pass',description:'Soulful, raw original music from Sarafina Ethereal. Listen free, or get your all access pass to the full music archive, intimate stories, and new releases every month. $2.99/month.',icons:{icon:{url:'/favicon.svg',type:'image/svg+xml'},apple:'/sarafina.jpg'}};
 export default function Layout({children}:{children:React.ReactNode}){return <html lang="en"><body><AuthProvider publishableKey={authSettings().NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>{children}</AuthProvider></body></html>}
