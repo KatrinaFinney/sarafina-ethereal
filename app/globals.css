@@ -374,3 +374,36 @@ nav a { text-transform: none; font-weight: 500; }
   .hero .text-link,.section-head p:last-child { font-size: 1rem; }
   .fine { font-size: .875rem; }
 }
+
+/* Warm, legible ink; a feathered photograph with an untouched center. */
+:root { --foreground: #281c19; --muted-foreground: #38231f; }
+header .brand-message { text-transform: lowercase; letter-spacing: -.025em; }
+.section-head p:last-child,.post-meta,.post-preview,.empty p,.collection-note,
+.song-card > p,.listening-soon p,footer span,footer small { color: var(--muted-foreground); }
+.collection-tabs button { color: #38231f !important; }
+.collection-tabs button[data-state=active] { color: #35182c !important; border-bottom-color: #35182c !important; }
+.text-link,.post-action { color: #35182c; font-weight: 600; }
+.hero-copy { isolation: isolate; }
+.hero-copy::before { content: ''; position: absolute; inset: 0 -60px 0 0; z-index: -1; pointer-events: none; background: linear-gradient(90deg,rgba(243,160,46,.97) 0%,rgba(243,160,46,.9) 64%,transparent 100%); }
+.portrait {
+  -webkit-mask-image: linear-gradient(90deg,transparent 0%,#000 20%,#000 83%,transparent 100%),linear-gradient(180deg,#000 0%,#000 85%,transparent 100%);
+  mask-image: linear-gradient(90deg,transparent 0%,#000 20%,#000 83%,transparent 100%),linear-gradient(180deg,#000 0%,#000 85%,transparent 100%);
+  -webkit-mask-composite: source-in; mask-composite: intersect;
+}
+.portrait::before {
+  background: inherit; filter: blur(6px); transform: scale(1.015);
+  -webkit-backdrop-filter: none; backdrop-filter: none;
+  -webkit-mask-image: radial-gradient(ellipse 43% 80% at 50% 40%,transparent 78%,#000 100%);
+  mask-image: radial-gradient(ellipse 43% 80% at 50% 40%,transparent 78%,#000 100%);
+}
+.membership { color: #fff5e8; }
+.membership-copy > p:last-child,.membership .fine,.membership .price span { color: #f1dfe2; }
+.membership .text-link { color: #fff5e8; }
+.closing,footer { background: linear-gradient(110deg,rgba(255,216,159,.94),rgba(255,211,179,.94)); }
+@media (max-width: 900px) {
+  .hero-copy::before { display: none; }
+  .portrait {
+    -webkit-mask-image: linear-gradient(90deg,transparent 0%,#000 10%,#000 90%,transparent 100%),linear-gradient(180deg,#000 0%,#000 80%,transparent 100%);
+    mask-image: linear-gradient(90deg,transparent 0%,#000 10%,#000 90%,transparent 100%),linear-gradient(180deg,#000 0%,#000 80%,transparent 100%);
+  }
+}
